@@ -45,7 +45,7 @@ def make_spectrum(filename=None, y=None, is_slice=False, feature_type='logmag', 
     ### Normalize waveform
     y = y / np.max(abs(y)) # / 2.
 
-    D = librosa.stft(y, n_fft=FRAMELENGTH, hop_length=SHIFT,win_length=FRAMELENGTH,window=scipy.signal.hamming)
+    D = librosa.stft(y, n_fft=FRAMELENGTH, hop_length=SHIFT,win_length=FRAMELENGTH,window="hamming")
     utt_len = D.shape[-1]
     phase = np.exp(1j * np.angle(D))
     D = np.abs(D)

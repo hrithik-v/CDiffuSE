@@ -1,2 +1,2 @@
-output_path="/kaggle/working/"
+output_path="/kaggle/working"
 voicebank="/kaggle/input/voicebank"
