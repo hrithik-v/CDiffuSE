@@ -177,7 +177,13 @@ def main(args):
   alpha, beta, alpha_cum, sigmas, T,c1, c2, c3, delta, delta_bar = inference_schedule(model, fast_sampling=args.fast)
 
 
-  output_path = os.path.join(args.output, specnames[0].split("/")[-2])
+  # output_path = os.path.join(args.output, specnames[0].split("/")[-2])
+  # more reliable:
+  spec_file = specnames[0]   # if you’re only doing one; or loop over all specnames
+  fname     = os.path.basename(spec_file)           # e.g. "noisy_001.npy"
+  base      = os.path.splitext(fname)[0]            # e.g. "noisy_001"
+  output_path = os.path.join(args.output, base)     # → ".../Enhanced/noisy_001"
+
   if not os.path.exists(output_path):
     os.makedirs(output_path)
   for spec in tqdm(specnames):
