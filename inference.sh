@@ -4,8 +4,8 @@ ckp=$3
 
 . ./path.sh
 
-voicebank_noisy="${voicebank}/noisy_testset_wav"
-voicebank_clean="${voicebank}/clean_testset_wav"
+voicebank_noisy="${voicebank}/noisy_testset_wav/noisy_testset_wav"
+voicebank_clean="${voicebank}/clean_testset_wav/clean_testset_wav"
 
 wav_root=${voicebank_noisy}
 spec_root=${output_path}/spec/voicebank_Noisy_Test
