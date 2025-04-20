@@ -3,10 +3,10 @@
 stage=$1
 model_name=$2  # e.g. "cdiffuse", "cdiffuse_pre"
 pretrain_model=$3 # e.g. cdiffuse_pre/weights-ckpt.pt"
-. ./path.sh
+# . ./path.sh
 
-voicebank_noisy="${voicebank}/noisy_trainset_28spk_wav"
-voicebank_clean="${voicebank}/clean_trainset_28spk_wav"
+voicebank_noisy="/kaggle/input/voicebank/noisy_trainset_28spk_wav/noisy_trainset_28spk_wav"
+voicebank_clean="/kaggle/input/voicebank/clean_trainset_28spk_wav/clean_trainset_28spk_wav"
 
 wav_root=${voicebank_noisy}
 spec_root=${output_path}/spec/voicebank_Noisy
