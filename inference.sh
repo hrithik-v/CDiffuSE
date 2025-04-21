@@ -2,7 +2,7 @@ stage=$1
 model_name=$2
 ckp=$3
 
-# . ./path.sh
+. ./path.sh
 
 # voicebank_noisy="${voicebank}/noisy_testset_wav/noisy_testset_wav"
 voicebank_noisy="/kaggle/working"
